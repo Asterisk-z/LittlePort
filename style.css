@@ -1,4 +1,476 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Roboto:ital,wght@0,300;0,400;0,500;1,400&display=swap');
 html, body {
   height: 100%;
   width: 100%;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins','Roboto', sans-serif;
+}
+
+.container {
+  margin: 1em auto;
+  width: 95%;
+}
+
+header {
+  width: 100%;
+  height: 5em;
+  position: sticky;
+  top: 0em;
+}
+
+header nav {
+  display: flex;
+  background-color: #fff;
+}
+
+header nav .brand  {
+  width: 20%;
+  text-align: center;
+}
+
+header nav .brand  .logo{
+  width: 5em;
+}
+
+header nav .navigation  {
+  width: 80%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+header nav .navigation ul{
+  display:  flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+header nav .navigation ul li{
+  list-style: none;
+  margin-right: 2em;
+}
+
+header nav .navigation ul li a{
+  text-decoration: none;
+  color: black;
+  padding: 1em 3em;
+}
+
+header nav .navigation ul li a:hover{
+  color: rgb(255, 255, 255);
+  background-color: #000;
+  border-radius: 10em;
+}
+
+section.intro {
+  padding: 2em 5em;
+}
+
+section.intro .intro_container{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+section.intro .text{
+  width: 50%;
+  padding: 1em 5em;
+}
+
+section.intro .text p,section.intro .text h3{
+  width: 80%;
+  margin: auto;
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+
+section.intro .image {
+  width: 50%;
+  text-align: center;
+}
+
+section.intro .image .me{
+  width: 15em;
+  border-radius: 50%;
+  outline: 2em solid #000;
+}
+
+section.goal {
+  padding: 2em 5em;
+  text-align: center;
+  background: linear-gradient(to top, #ccc, #ccc);
+}
+
+section.goal .goal_container .lead{
+    font-size: 2em;
+}
+
+section.goal .goal_container .description{
+  width: 50%;
+  margin: auto;
+}
+
+section.hobbies .hobbies_container  {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+section.hobbies .hobbies_container .lead{
+  margin-bottom: 1em;
+}
+
+section.hobbies .hobbies_container .main {
+  display: flex;
+  flex-wrap: wrap;
+}
+section.hobbies .hobbies_container div {
+  background-image: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+section.hobbies .hobbies_container  .chess {
+  background-image: url('chess.jpeg');
+  height: 20em;
+  width: 50%;
+}
+
+section.hobbies .hobbies_container  .monopoly {
+  background-image: url('monopoly.jpg');
+  height: 20em;
+  width: 50%;
+}
+section.hobbies .hobbies_container div h4 {
+ color: #FFF;
+ vertical-align: baseline;
+
+}
+section.hobbies .hobbies_container p {
+  color: #fff
+}
+
+section.hobbies {
+  padding: 2em 5em;
+}
+
+section.footer {
+  padding: 2em 5em;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+}
+
+.back {
+  padding: .5em 2em;
+  color: #000;
+  background-color: #ccc;
+  text-decoration: none;
+  border-radius: 1em;
+}
+.back:hover {
+  padding: .5em 2em;
+  background-color: #000;
+  color: #ccc;
+  text-decoration: none;
+  border-radius: 1em;
+}
+
+.back::before {
+  content: '<<';
+  margin-right: .5em;
+}
+
+.login_container {
+  width: 25em;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #000;
+  border-radius: 1em;
+  background-color: #ccc;
+}
+
+.login_container .heading {
+  text-align: center;
+  padding: 1em;
+  text-transform: uppercase;
+}
+
+.login_container .input-row {
+  display: flex;
+  flex-direction: column;
+  padding: .9em;
+}
+
+.login_container .input-row > span {
+    font-size: small;
+    text-transform: capitalize;
+    font-weight: 500;
+} 
+
+.login_container .input-row > input {
+  width: 100%;
+  font-size: 1.2em;
+  padding: .2em .1em;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #000;
+  background-color: transparent;
+} 
+
+.login_container .input-row > input[type=submit] {
+  width: 50%;
+  border: 1px solid #000;
+  outline: none;
+  cursor: pointer;
+  align-self: flex-end;
+  background-color: #ccc;
+  margin-bottom: 2em;
+} 
+
+.login_container .input-row > input[type=submit]:hover {
+  background-color: #000;
+  color: #fff;
+} 
+
+.cards {
+  display: flex;
+  flex-direction: row;
+}
+
+.card {
+  width: 50%;
+  text-align: center;
+  padding: 5em;
+}
+
+.card div {
+  width: 50%;
+}
+
+.card.details  div{
+  width: 50%;
+  padding: 1.7em;
+  margin: .5em auto;
+  border: 1px solid #000;
+}
+
+.card.details  div:hover{
+  background-color: #ccc;
+  border: 1px solid #ccc;
+}
+
+.card.contact_form form .heading {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.card.contact_form form .input-row {
+  align-self: start;
+  width: 100%;
+  margin: 1em;
+}
+
+.card.contact_form form .input-row span {
+  float: left;
+}
+
+.card.contact_form form .input-row input {
+  width: 100%;
+  font-size: 1.2em;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #000;
+}
+
+.card.contact_form form .input-row textarea {
+  width: 100%;
+  font-size: 1.2em;
+}
+
+.card.contact_form form .input-row select {
+  width: 90%;
+  font-size: 1.2em;
+  border: 1px solid #000;
+  outline: none;
+  margin: 1em 0em;
+  outline: none;
+  padding: .5em 1em;
+}
+.card.contact_form form .input-row input[type=submit] {
+  width: 30%;
+  font-size: 1.5em;
+  border: 1px solid #000;
+  outline: none;
+  background-color: #ccc;
+  padding: .2em 1em;
+}
+.card.contact_form form .input-row input[type=submit]:hover {
+
+  background-color: #000;
+  color: #ccc;
+}
+
+.register_container {
+  width: 50em;
+  background-color: #ccc;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #000;
+  border-radius: 1em;
+}
+
+.register_container .heading {
+  text-align: center;
+  padding: 1em;
+  text-transform: uppercase;
+}
+
+.register_container .col {
+  display: flex;
+}
+
+.register_container .input-row {
+  display: flex;
+  flex-direction: column;
+  padding: .9em;
+}
+
+.register_container .input-row > span {
+    font-size: small;
+    text-transform: capitalize;
+    font-weight: 500;
+} 
+
+.register_container .input-row > input {
+  width: 100%;
+  font-size: 1.2em;
+  padding: .2em .1em;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #000;
+  background-color: transparent;
+}  
+
+.register_container .input-row > select {
+  width: 23em;
+  font-size: 1em;
+  padding: .2em .1em;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #000;
+  background-color: transparent;
+} 
+
+.register_container .input-row > input[type=submit] {
+  width: 50%;
+  border: 1px solid #000;
+  outline: none;
+  cursor: pointer;
+  align-self: flex-end;
+  background-color: #ccc;
+  margin-bottom: 2em;
+} 
+
+.register_container .input-row > input[type=submit]:hover {
+  background-color: #000;
+  color: #fff;
+} 
+
+
+.cal_container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #000;
+  border-radius: 1em;
+  text-align: center;
+  background-color: #ccc;
+  padding: .5em;
+}
+
+.cal_container textarea{
+   width: 100% !important;
+    max-height: 8em;
+    min-height: 8em;
+}
+
+.cal_container table tbody tr{
+  width: 100%;
+  margin: 0em;
+}
+
+.cal_container table tbody tr td {
+  width: 5em;
+  padding: .5em;
+  border: 1px solid #000;
+  margin: 0em;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.cal_container table tbody tr td:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+
+  .cal-container-flex {
+      display: flex;
+      width: 20em;
+      flex-wrap: wrap;
+      flex: 0 1 60%;
+      min-width: 400px;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .cal-container-flex .numbers,
+  .cal-container-flex .answer {
+      display: flex;
+      flex-wrap: wrap;
+      flex: 0 100%;
+  }
+
+  .cal-container-flex .answer {
+      height: 2em;
+      border: 1px solid black;
+      justify-content: flex-end;
+      align-items: center;
+      font-size: 3em;
+      background: #ccc;
+      color: #000;
+      padding: 0 .5em;
+  }
+
+  .cal-container-flex .number {
+      display: flex;
+      flex: 0 25%;
+      justify-content: center;
+      align-items: center;
+      height: 2em;
+      border: 1px solid black;
+      cursor: pointer;
+      background: #fff;
+      font-size: 2em;
+  }
+
+  .cal-container-flex .number:hover {
+      background: #000;
+      color: #fff;
+  }
+
+  .cal-container-flex .number:nth-child(4n+1) {
+      border-left: 1px solid black;
+  }
+
+  .cal-container-flex .zero {
+      flex-grow: 2;
+  }
